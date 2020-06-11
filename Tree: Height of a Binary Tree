@@ -1,0 +1,18 @@
+/*
+    class Node 
+    	int data;
+    	Node left;
+    	Node right;
+	*/
+	public static int height(Node root) {
+      	// Write your code here.
+          int max_left=0,max_right=0,max_depth=0;
+          if(root==null)
+          return -1;
+          else{
+             max_left= height(root.left);
+             max_right=height(root.right);
+             max_depth=Math.max(max_left,max_right)+1;
+          }
+         return max_depth;  
+    }
